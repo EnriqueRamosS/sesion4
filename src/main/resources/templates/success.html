@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Exito</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white text-center">
+                <h1 class="m-0">Formulario Enviado con Éxito</h1>
+            </div>
+            <div class="card-body">
+                <p><strong>Nombre:</strong> <span th:text="${alumno.nombre}"></span></p>
+                <p><strong>Apellido Paterno:</strong> <span th:text="${alumno.apellidoPaterno}"></span></p>
+                <p><strong>Apellido Materno:</strong> <span th:text="${alumno.apellidoMaterno}"></span></p>
+                <p><strong>Fecha de Nacimiento:</strong> <span th:text="${#dates.format(alumno.fechaNacimiento, 'dd/MM/yyyy')}"></span></p>
+                <p><strong>Residencia:</strong> <span th:text="${alumno.residencia}"></span></p>
+                <p><strong>Edad:</strong> <span th:text="${alumno.edad}"></span></p>
+                <p><strong>Teléfono:</strong> <span th:text="${alumno.telefono}"></span></p>
+                <p><strong>Email:</strong> <span th:text="${alumno.email}"></span></p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
